@@ -1,4 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/14 14:15:10 by user42            #+#    #+#             */
+/*   Updated: 2020/09/14 19:43:05 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ZombieEvent.hpp"
+
+ZombieEvent::ZombieEvent()
+{	
+}
 
 void	ZombieEvent::setZombieType(std::string type)
 { 
@@ -12,30 +28,20 @@ Zombie *ZombieEvent::newZombie(std::string name)
 	return zombie;
 }
 
-//code from https://inversepalindrome.com/blog/how-to-create-a-random-string-in-cpp
-
-std::string random_string(std::size_t length)
-{
-    const std::string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
-    std::random_device random_device;
-    std::mt19937 generator(random_device());
-    std::uniform_int_distribution<> distribution(0, characters.size() - 1);
-    std::string random_string;
-    for (std::size_t i = 0; i < length; ++i)
-    {
-        random_string += characters[distribution(generator)];
-    }
-    return random_string;
-}
-
 Zombie	*ZombieEvent::randomChump(void)
 {
-	std::string name;
+	std::string name[10] = {"Lucas", "Cleo", "Florianne", "Badria", "Alexandra", "Alice",
+    "Juan", "Andrea", "Gabriel", "Enzo"};
 	Zombie *zombie;
-	
-	name = random_string(10);
-	zombie = new Zombie(name, m_type);
+    int nb;
+   
+    srand(time(NULL));
+    nb = rand() % 10;
+	zombie = new Zombie(name[nb], m_type);
 	zombie->advert();
 	return zombie;
+}
+
+ZombieEvent::~ZombieEvent()
+{
 }

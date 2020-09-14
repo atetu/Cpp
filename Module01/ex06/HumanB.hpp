@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/14 17:38:21 by user42            #+#    #+#             */
+/*   Updated: 2020/09/14 17:38:22 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HUMANB_HPP
 #define HUMANB_HPP
 
@@ -14,7 +26,7 @@ class HumanB
 		void attack(void);
 
 	private:
-		std::string name;
-		const Weapon *weapon;
+		std::string _name;
+		const Weapon *_weapon;
 };
 #endif

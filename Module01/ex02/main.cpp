@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/14 14:15:50 by user42            #+#    #+#             */
+/*   Updated: 2020/09/14 14:42:23 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ZombieEvent.hpp"
 #include "Zombie.hpp"
 
@@ -28,5 +40,4 @@ int main()
 	delete zombie1;
 	std::cout << "After one hour, only ZombieStack remains\n";
 	stack.advert();
-	system("leaks a.out");
 }

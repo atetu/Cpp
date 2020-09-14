@@ -1,8 +1,0 @@
-Avant de commencer, il est fondamental de bien comprendre le fonctionnement de sed. C'est ce qui nous permettra d'en connaitre les limites, savoir ce que l'on peut faire et ne pas faire avec, à quoi est-il adapté, etc.
-
-En premier lieu, il faut retenir que sed fonctionne en mode «flux», c'est-à-dire que le flux en entrée (fichier ou autre) est traité ligne par ligne. Ceci garantit de bonnes performances, ainsi qu'une utilisation réduite en mémoire, mais empêche certains types d'utilisations. Donc, à vous de voir si l'utilisation de sed correspond à votre problème ou non.
-Retenez bien ce point, nous y reviendrons en détail plus loin.
-
-Ensuite, il convient de noter deux façons d'utiliser sed :
-
-

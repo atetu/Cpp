@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/14 14:57:13 by user42            #+#    #+#             */
+/*   Updated: 2020/09/14 15:09:29 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ZombieHorde.hpp"
 #include "Zombie.hpp"
 
@@ -5,7 +17,5 @@ int main()
 {
 	ZombieHorde zombie_horde(5);
 	zombie_horde.announce();
-//	zombie_horde.~ZombieHorde();
-	system("leaks a.out");
 	return(0);
 }

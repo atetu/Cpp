@@ -1,9 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/14 16:28:17 by user42            #+#    #+#             */
+/*   Updated: 2020/09/14 16:48:45 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <fstream>
 #include <string>
 
 
-//npos is a static member constant value with the greatest possible value for an element of type size_t. This value, when used as the value for a len (or sublen) parameter in string's member functions, means "until the end of the string". As a return value, it is usually used to indicate no matches.
+/*npos is a static member constant value with the greatest possible value 
+for an element of type size_t. 
+This value, when used as the value for a len (or sublen) parameter 
+in string's member functions, means "until the end of the string". 
+As a return value, it is usually used to indicate no matches.*/
 
 bool	check_arguments(int argc, char **argv)
 {
@@ -30,8 +46,11 @@ bool	check_arguments(int argc, char **argv)
 bool	replace(std::ifstream &file_srcs, std::string s1, std::string s2)
 {
 	std::string line;
-	std::ofstream file_dest ("FILENAME.replace", std::ios::app);
+	bool equal = false;
+	std::ofstream file_dest("FILENAME.replace");
 	size_t len = s1.length();
+	if (s1.compare(s2) == 0)
+		equal = true;
 	if (file_dest)
 	{
 		while (std::getline(file_srcs, line))
@@ -39,22 +58,23 @@ bool	replace(std::ifstream &file_srcs, std::string s1, std::string s2)
 			while (true)
 			{
 				size_t pos = line.find(s1);
-				if (pos != std::string::npos)
+				if (pos != std::string::npos && !equal)
 					line.replace(pos, len, s2);
-            			else
-                			break;
+				else
+					break;
 			}
 			file_dest << line << std::endl;
 		}
 	}
 	else
 	{
-		std::cout << "Error: could not creat destination file.\n";
+		std::cout << "Error: could not create destination file.\n";
 		return false;
 	}	
 	return true;
 }
 
+/* ifstream : input stream class to operate on files*/
 
 int main(int argc, char **argv)
 {
