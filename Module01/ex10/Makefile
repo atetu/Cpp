@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/14 17:27:32 by user42            #+#    #+#              #
-#    Updated: 2020/09/14 17:29:40 by user42           ###   ########.fr        #
+#    Updated: 2020/09/16 15:53:50 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,20 +31,11 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				$(CPP) $(CFLAGS) $(OBJS) -o $(NAME)
 	
-test1:			$(NAME)
-				rm FILENAME.replace
-				./replace test_text1 amour XXX
-
-test2:			$(NAME)
-				rm FILENAME.replace
-				./replace test_text2 sed XXX
 clean:			
 				rm $(OBJS)
 
 fclean: 		clean
 				rm $(NAME)
-				rm FILENAME.replace
-
 
 re:				fclean all
 

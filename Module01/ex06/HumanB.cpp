@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 16:02:58 by user42            #+#    #+#             */
-/*   Updated: 2020/09/14 16:19:47 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/16 15:32:26 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ HumanB::~HumanB()
 {
 }
 
-void HumanB::setWeapon(const Weapon &weapon)
+void HumanB::setWeapon(Weapon &weapon)
 {
 	this->_weapon = &weapon;
 }

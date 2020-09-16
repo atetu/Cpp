@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 16:28:17 by user42            #+#    #+#             */
-/*   Updated: 2020/09/14 16:48:45 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/16 15:44:59 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ bool	replace(std::ifstream &file_srcs, std::string s1, std::string s2)
 		std::cout << "Error: could not create destination file.\n";
 		return false;
 	}	
+	file_dest.close();
 	return true;
 }
 

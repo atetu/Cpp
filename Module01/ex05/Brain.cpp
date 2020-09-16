@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 15:28:56 by user42            #+#    #+#             */
-/*   Updated: 2020/09/14 19:28:09 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/16 15:22:52 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ std::string Brain::identify(void) const
 	return name;
 }
 
-void Brain::get_infos(void)
+void Brain::get_infos(void) const // otherwise does not compile with the flags
 {
-	std::cout << "this Brain has " << m_neurons << " neurons." << std::endl;
+	std::cout << "This Brain has " << m_neurons << " neurons." << std::endl;
 }

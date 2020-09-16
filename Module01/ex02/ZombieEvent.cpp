@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 14:15:10 by user42            #+#    #+#             */
-/*   Updated: 2020/09/14 19:43:05 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/16 15:03:46 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 ZombieEvent::ZombieEvent()
 {	
+}
+
+ZombieEvent::~ZombieEvent()
+{
 }
 
 void	ZombieEvent::setZombieType(std::string type)
@@ -40,8 +44,4 @@ Zombie	*ZombieEvent::randomChump(void)
 	zombie = new Zombie(name[nb], m_type);
 	zombie->advert();
 	return zombie;
-}
-
-ZombieEvent::~ZombieEvent()
-{
 }

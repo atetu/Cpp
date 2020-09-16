@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 17:38:21 by user42            #+#    #+#             */
-/*   Updated: 2020/09/14 17:38:22 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/16 15:32:16 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ class HumanB
 	public:
 		HumanB(std::string n);
 		~HumanB();
-		void setWeapon(const Weapon &weapon);
+		void setWeapon(Weapon &weapon);
 		void attack(void);
 
 	private:
 		std::string _name;
-		const Weapon *_weapon;
+		Weapon *_weapon;
 };
 #endif
