@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/17 17:50:20 by user42            #+#    #+#             */
+/*   Updated: 2020/09/17 18:13:31 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
@@ -19,6 +31,7 @@ int main()
 	trognon.rangedAttack("Potiron");
 	trognon.meleeAttack("une horde de mechants");
 	trognon.takeDamage(20);
+	trognon.takeDamage(100);
 	trognon.beRepaired(10);
 	trognon.challengeNewcomer("Astragon");
 	trognon.challengeNewcomer("Patachon");

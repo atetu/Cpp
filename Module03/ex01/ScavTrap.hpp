@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/17 17:50:28 by user42            #+#    #+#             */
+/*   Updated: 2020/09/17 18:02:29 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
@@ -32,4 +44,7 @@ class ScavTrap
 		int ranged_attack_damage;
 		int armor_damage_reduction;
 };
+
+typedef void(ScavTrap::*challenge) (std::string const &newcomer);
+
 #endif

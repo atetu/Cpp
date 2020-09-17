@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/17 17:47:45 by user42            #+#    #+#             */
+/*   Updated: 2020/09/17 17:47:46 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
@@ -34,4 +46,5 @@ class FragTrap
 		int ranged_attack_damage;
 		int armor_damage_reduction;
 };
+typedef void(FragTrap::* attack) (std::string const &target);
 #endif

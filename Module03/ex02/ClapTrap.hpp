@@ -9,7 +9,7 @@ class ClapTrap
 {
 	public:
 		ClapTrap();
-		ClapTrap(std::string n);
+		ClapTrap(int hp, int mhp, int ep, int mep, int l, std::string n, int mad, int rad, int adr);
 		~ClapTrap();
 		ClapTrap(ClapTrap const &to_copy);
 		ClapTrap &operator=(ClapTrap const &to_copy);

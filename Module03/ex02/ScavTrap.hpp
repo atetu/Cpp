@@ -9,6 +9,7 @@
 class ScavTrap : public ClapTrap
 {
 	public:
+		ScavTrap();
 		ScavTrap(std::string n);
 		~ScavTrap();
 		ScavTrap(ScavTrap const &to_copy);
@@ -20,4 +21,5 @@ class ScavTrap : public ClapTrap
 		void riddle(std::string const &newcomer);
 		void story(std::string const &newcomer);
 };
+typedef void(ScavTrap::*challenge) (std::string const &newcomer);
 #endif

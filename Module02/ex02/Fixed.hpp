@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/17 16:35:37 by user42            #+#    #+#             */
+/*   Updated: 2020/09/17 18:03:11 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
@@ -37,10 +49,10 @@ class Fixed
 		Fixed operator--(int);
 
 
-		static Fixed const &min(Fixed const &a, Fixed const &b);
-		static Fixed const &max(Fixed const &a, Fixed const &b);
-		static Fixed &min(Fixed &a, Fixed &b);
-		static Fixed &max(Fixed &a, Fixed &b);
+		static const Fixed & min(Fixed const& a, Fixed const& b);
+		static const Fixed & max(Fixed const& a, Fixed const& b);
+		static Fixed & min(Fixed & a, Fixed & b);
+		static Fixed & max(Fixed & a, Fixed & b);
 
 	private:
 		int fixed_point_value;
@@ -48,4 +60,8 @@ class Fixed
 };
 
 std::ostream &operator<<(std::ostream &out_flux, const Fixed &fixed);
+Fixed const& min(Fixed const& a, Fixed const& b);
+Fixed const& max(Fixed const& a, Fixed const& b);
+Fixed & min(Fixed &a, Fixed &b);
+Fixed & max(Fixed &a, Fixed &b);
 #endif

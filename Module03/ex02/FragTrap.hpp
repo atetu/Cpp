@@ -9,6 +9,7 @@
 class FragTrap : public ClapTrap
 {
 	public:
+		FragTrap();
 		FragTrap(std::string n);
 		~FragTrap();
 		FragTrap(FragTrap const &to_copy);
@@ -24,4 +25,5 @@ class FragTrap : public ClapTrap
 
 	private:
 };
+typedef void(FragTrap::* attack) (std::string const &target);
 #endif

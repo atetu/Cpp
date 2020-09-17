@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/17 16:35:09 by user42            #+#    #+#             */
+/*   Updated: 2020/09/17 16:35:10 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 Fixed::Fixed() : fixed_point_value(0)
@@ -44,13 +56,14 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
-	fixed_point_value = raw;
+	this->fixed_point_value = raw;
 }
 
 float Fixed::toFloat(void) const
 {
 	float result;
-	result = (float)this->fixed_point_value / (float)(256);
+//	result = (float)this->fixed_point_value / (float)(256);
+	result = (float)this->fixed_point_value / (1 << fractional_bits);
 	return (result);
 }
 
