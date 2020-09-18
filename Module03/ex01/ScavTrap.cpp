@@ -6,11 +6,16 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 17:50:33 by user42            #+#    #+#             */
-/*   Updated: 2020/09/17 18:45:47 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/18 19:35:27 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap() : ClapTrap(100, 100, 50, 50, 1, "no name", 20, 15, 3)
+{
+	std::cout << "ScavTrap " << this->name << " ici present.\n";
+}
 
 ScavTrap::ScavTrap(std::string n) :
 hit_points(100),

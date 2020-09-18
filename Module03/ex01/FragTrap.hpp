@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 17:47:45 by user42            #+#    #+#             */
-/*   Updated: 2020/09/17 17:47:46 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/18 19:35:05 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 class FragTrap
 {
 	public:
+		FragTrap();
 		FragTrap(std::string n);
 		~FragTrap();
 		FragTrap(FragTrap const &to_copy);

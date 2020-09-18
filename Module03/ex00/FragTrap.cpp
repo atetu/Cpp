@@ -6,11 +6,17 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 17:47:36 by user42            #+#    #+#             */
-/*   Updated: 2020/09/17 17:47:37 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/18 19:36:00 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap() : ClapTrap(100, 100, 100, 100, 1, "no name", 30, 20, 5)
+{
+	std::cout << "FragTrap " << this->name << " ici present.\n";
+	std::cout << "Bonjour, je suis votre nouveau robot multifonction.\n";
+}
 
 FragTrap::FragTrap(std::string n) :
 hit_points(100), 

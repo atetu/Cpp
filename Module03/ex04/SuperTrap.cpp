@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   SuperTrap.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/18 19:38:57 by user42            #+#    #+#             */
+/*   Updated: 2020/09/18 19:38:58 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "SuperTrap.hpp"
 
 
 SuperTrap::SuperTrap() : 
-	ClapTrap(100, 100, 120, 120, 1, n, 60, 20, 5),
-	FragTrap(),
-	NinjaTrap()
+	ClapTrap(100, 100, 120, 120, 1, "no name", 60, 20, 5),
+	FragTrap(), NinjaTrap()
+	
 {
+	std::cout << "SuperTrap " << name << " pour vous servir.\n";
 }
 
 SuperTrap::SuperTrap(std::string n) :
@@ -13,14 +26,7 @@ SuperTrap::SuperTrap(std::string n) :
 	FragTrap(), 
 	NinjaTrap()
 {
-    // hit_points = FragTrap::hit_points;
-	// max_hit_points = NinjaTrap::max_hit_points;
-	// energy_points = NinjaTrap::energy_points;
-	// max_energy_points = NinjaTrap::max_energy_points;
-	// melee_attack_damage = NinjaTrap::melee_attack_damage;
-	// ranged_attack_damage = FragTrap::ranged_attack_damage;
-	// armor_damage_reduction = FragTrap::armor_damage_reduction;
-	std::cout << "SuperTrap " << name << " pour vous servir.\n";
+	
 }
 
 SuperTrap::~SuperTrap()
@@ -56,5 +62,40 @@ void SuperTrap::meleeAttack(std::string const &target)
 
 void SuperTrap::get_hit_points(void)
 {
-	std::cout << "SUperTrap has " << this->hit_points << std::endl;
+	std::cout << "SuperTrap a " << this->hit_points << " \"hit points\"." << std::endl;
+}
+
+void SuperTrap::get_max_hit_points(void)
+{
+	std::cout << "SuperTrap a " << this->max_hit_points << " \"max hit points\"." << std::endl;
+}
+
+void SuperTrap::get_energy_points(void)
+{
+	std::cout << "SuperTrap a " << this->energy_points << " \"energy points\"." <<  std::endl;
+}
+
+void SuperTrap::get_max_energy_points(void)
+{
+	std::cout << "SuperTrap a " << this->max_energy_points << " \"max energy points\"." << std::endl;
+}
+
+void SuperTrap::get_level(void)
+{
+	std::cout << "SuperTrap est niveau " << this->level << "." << std::endl;
+}
+
+void SuperTrap::get_melee_attack_damage_points(void)
+{
+	std::cout << "SuperTrap a " << this->melee_attack_damage << " \"melee attack damage points\"." << std::endl;
+}
+
+void SuperTrap::get_ranged_attack_damage_points(void)
+{
+	std::cout << "SuperTrap a " << this->ranged_attack_damage << " \"ranged attack damage points\"." << std::endl;
+}
+
+void SuperTrap::get_armor_damage_reduction_points(void)
+{
+	std::cout << "SuperTrap a " << this->armor_damage_reduction << " \"armor damage reduction points\"." << std::endl;
 }

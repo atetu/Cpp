@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   NinjaTrap.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/18 19:37:35 by user42            #+#    #+#             */
+/*   Updated: 2020/09/18 19:37:36 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap()
+NinjaTrap::NinjaTrap() : : ClapTrap(60, 60, 120, 120, 1, "no name", 60, 5, 0)
 {
+	std::cout << "NinjaTrap " << this->name << " pret.\n";
 }
 
 NinjaTrap::NinjaTrap(std::string n) : ClapTrap(60, 60, 120, 120, 1, n, 60, 5, 0)
