@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/18 10:55:27 by user42            #+#    #+#             */
+/*   Updated: 2020/09/18 11:09:05 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() :
@@ -30,7 +42,7 @@ armor_damage_reduction(adr)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << this->name << " disparait.\n";
+	std::cout << "ClapTrap " << this->name << " disparait.\n";
 }
 
 ClapTrap::ClapTrap(ClapTrap const &to_copy)
@@ -54,20 +66,6 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &to_copy)
 		this->armor_damage_reduction = to_copy.armor_damage_reduction;
 	}
 	return (*this);
-}
-
-void ClapTrap::rangedAttack(std::string const &target)
-{
-	std::cout << "ClapTrap " << this->name << " attaque ";
-	std::cout << target << " a distance, causant ";
-	std::cout << this->ranged_attack_damage << " points de degats.\n";
-}
-
-void ClapTrap::meleeAttack(std::string const &target)
-{
-	std::cout << "ClapTrap " << this->name << " attaque ";
-	std::cout << target << " au corps a corps causant ";
-	std::cout << this->melee_attack_damage << " points de degats!\n";
 }
 
 void ClapTrap::takeDamage(unsigned int amount)

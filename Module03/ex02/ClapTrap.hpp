@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/18 10:55:21 by user42            #+#    #+#             */
+/*   Updated: 2020/09/18 11:08:55 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
 
@@ -13,8 +25,6 @@ class ClapTrap
 		~ClapTrap();
 		ClapTrap(ClapTrap const &to_copy);
 		ClapTrap &operator=(ClapTrap const &to_copy);
-		void rangedAttack(std::string const &target);
-		void meleeAttack(std::string const &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 

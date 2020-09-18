@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 17:47:36 by user42            #+#    #+#             */
-/*   Updated: 2020/09/17 18:31:27 by user42           ###   ########.fr       */
+/*   Updated: 2020/09/18 13:54:20 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ armor_damage_reduction(5)
 
 FragTrap::~FragTrap()
 {
-	std::cout << this->name << " est finalement detruit." << std::endl;
+	std::cout << "FragTrap " << this->name << " est finalement detruit." << std::endl;
 	std::cout << "Je suis mort, je suis mort. Oh mon dieu, je suis mort\n";
 }
 

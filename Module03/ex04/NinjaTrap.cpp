@@ -4,21 +4,14 @@ NinjaTrap::NinjaTrap()
 {
 }
 
-NinjaTrap::NinjaTrap(std::string n) : ClapTrap(n)
+NinjaTrap::NinjaTrap(std::string n) : ClapTrap(60, 60, 120, 120, 1, n, 60, 5, 0)
 {
-	hit_points = 60;
-       	max_hit_points = 60;
-	energy_points = 120;
-	max_energy_points = 120;
-	melee_attack_damage = 60;
-	ranged_attack_damage = 5;
-	armor_damage_reduction = 0;
-	std::cout << "NinjaTrap " << name << " pret.\n";
+	std::cout << "NinjaTrap " << this->name << " pret.\n";
 }
 
 NinjaTrap::~NinjaTrap()
 {
-	std::cout << name << " : \"Tchit, boum.\"\n";
+	std::cout << "NinjTrap "<< this->name << " : \"Tchitt, boum.\"\n";
 }
 
 NinjaTrap::NinjaTrap(NinjaTrap const &to_copy)
@@ -31,39 +24,39 @@ NinjaTrap &NinjaTrap::operator=(NinjaTrap const &to_copy)
 {
 	if (this != &to_copy)
 		ClapTrap::operator=(to_copy);
-	return *this;
+	return (*this);
 }
 
 void NinjaTrap::rangedAttack(std::string const &target)
 {
-	std::cout << "NINJATRAP " << name << " attaque " << target << " a distance, causant "<< ranged_attack_damage << " points de degats! Quel magnifique tir!\n";
+	std::cout << "NinjaTrap " << this->name << " attaque " << target << " a distance, causant "<< this->ranged_attack_damage << " points de degats! Quel magnifique tir!\n";
 }
 
 void NinjaTrap::meleeAttack(std::string const &target)
 {
-	std::cout << "NINJATRAP " << name << " attaque " << target << " au corps a corps causant "<< melee_attack_damage << " points de degats! Le tonnerre va frapper\n";
+	std::cout << "NinjaTrap " << this->name << " attaque " << target << " au corps a corps causant "<< this->melee_attack_damage << " points de degats! Le tonnerre va frapper\n";
 }
 
 void NinjaTrap::ninjaShoebox(ClapTrap &obj)
 {
-	std::cout << "Lancer de chaussures pestilentielles par NinjaTrap " << name << " sur ClapTrap " << obj.get_name() << ".\n";
-	obj.takeDamage(ranged_attack_damage);
+	std::cout << "Lancer de chaussures pestilentielles par NinjaTrap " << this->name << " sur ClapTrap " << obj.get_name() << ".\n";
+	obj.takeDamage(this->ranged_attack_damage);
 }
 
 void NinjaTrap::ninjaShoebox(FragTrap &obj)
 {
-	std::cout << "Attaque pieds nus par NinjaTrap " << name << " sur FragTrap " << obj.get_name() << ".\n";
-	obj.takeDamage(melee_attack_damage);
+	std::cout << "Attaque pieds nus par NinjaTrap " << this->name << " sur FragTrap " << obj.get_name() << ".\n";
+	obj.takeDamage(this->melee_attack_damage);
 }
 
 void NinjaTrap::ninjaShoebox(ScavTrap &obj)
 {
-	std::cout << "Vol de chaussures par NinjaTrap " << name << " sur ScavTrap " << obj.get_name() << ".\n";
-	obj.takeDamage(ranged_attack_damage);
+	std::cout << "Vol de chaussures par NinjaTrap " << this->name << " sur ScavTrap " << obj.get_name() << ".\n";
+	obj.takeDamage(this->ranged_attack_damage);
 }
 
 void NinjaTrap::ninjaShoebox(NinjaTrap &obj)
 {
-	std::cout << "Attaque sur la pointe des pieds par NinjaTrap " << name << " sur NinjaTrap " << obj.get_name() << ".\n";
-	obj.takeDamage(ranged_attack_damage);
+	std::cout << "Attaque sur la pointe des pieds par NinjaTrap " << this->name << " sur NinjaTrap " << obj.get_name() << ".\n";
+	obj.takeDamage(this->ranged_attack_damage);
 }

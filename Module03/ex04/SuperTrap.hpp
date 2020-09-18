@@ -17,5 +17,6 @@ class SuperTrap : public FragTrap, public NinjaTrap
 		SuperTrap &operator=(SuperTrap const &to_copy);
 		void rangedAttack(std::string const &target);
 		void meleeAttack(std::string const &target);
+		void get_hit_points(void);
 };
 #endif

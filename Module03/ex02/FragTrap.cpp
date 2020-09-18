@@ -1,18 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/18 10:55:16 by user42            #+#    #+#             */
+/*   Updated: 2020/09/18 13:55:26 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap(100, 100, 100, 100, 1, "no name", 30, 20, 5)
 {
-	std::cout << "FragTrap " << name << " ici present.\n";
+	std::cout << "FragTrap " << this->name << " ici present.\n";
+	std::cout << "Bonjour, je suis votre nouveau robot multifonction.\n";
 }
 
 FragTrap::FragTrap(std::string n) : ClapTrap(100, 100, 100, 100, 1, n, 30, 20, 5)
 {
-	std::cout << "FragTrap " << name << " ici present.\n";
+	std::cout << "FragTrap " << this->name << " ici present.\n";
+	std::cout << "Bonjour, je suis votre nouveau robot multifonction.\n";
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << name << " : \"Je suis mort, je suis mort. Oh mon dieu, je suis mort!\"\n";
+	std::cout << "FragTrap " << this->name << " est finalement detruit." << std::endl;
+	std::cout << "Je suis mort, je suis mort. Oh mon dieu, je suis mort!\"\n";
 }
 
 FragTrap::FragTrap(FragTrap const &to_copy)
@@ -44,7 +59,7 @@ void FragTrap::meleeAttack(std::string const &target)
 
 void FragTrap::roi_de_la_savate(std::string const &target)
 {
-	std::cout << "Attaque de " << target << " par la fameuse techniaue du 'Roi de la savate'.\n";
+	std::cout << "Attaque de " << target << " par la fameuse technique du 'Roi de la savate'.\n";
 }
 
 void FragTrap::grenade_de_la_colere(std::string const &target)

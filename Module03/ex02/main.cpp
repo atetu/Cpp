@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/18 10:54:59 by user42            #+#    #+#             */
+/*   Updated: 2020/09/18 11:13:11 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
@@ -26,5 +38,10 @@ int main()
 	trognon.challengeNewcomer("Astragon");
 	trognon.challengeNewcomer("Patachon");
 	trognon.challengeNewcomer("Zebulon");
+	std::cout << "\n\n";
+	std::cout << "ClapTrap class: \n";
+	ClapTrap grincheux(60, 60, 40, 40, 3, "Grincheux", 30, 30, 10);
+	grincheux.takeDamage(20);
+	grincheux.beRepaired(10);
 	return (0);
 }

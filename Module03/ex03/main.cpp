@@ -7,7 +7,7 @@ int main()
 {
 	NinjaTrap ninja("Ninja");
 	NinjaTrap mini_ninja("Mini Ninja");
-	ClapTrap handy("Handy");
+	ClapTrap handy(60, 60, 40, 40, 3, "Handy", 30, 30, 10);
 	FragTrap killer("Killer");
 	ScavTrap trognon ("Trognon");
 	ninja.rangedAttack("Troll");

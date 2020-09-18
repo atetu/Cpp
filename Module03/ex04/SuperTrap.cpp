@@ -1,19 +1,25 @@
 #include "SuperTrap.hpp"
 
 
-SuperTrap::SuperTrap() : ClapTrap(), FragTrap(), NinjaTrap()
+SuperTrap::SuperTrap() : 
+	ClapTrap(100, 100, 120, 120, 1, n, 60, 20, 5),
+	FragTrap(),
+	NinjaTrap()
 {
 }
 
-SuperTrap::SuperTrap(std::string n) : ClapTrap(n), FragTrap(n), NinjaTrap(n)
+SuperTrap::SuperTrap(std::string n) :
+	ClapTrap(100, 100, 120, 120, 1, n, 60, 20, 5),
+	FragTrap(), 
+	NinjaTrap()
 {
-     	hit_points = FragTrap::hit_points;
-	max_hit_points = NinjaTrap::max_hit_points;
-	energy_points = NinjaTrap::energy_points;
-	max_energy_points = NinjaTrap::max_energy_points;
-	melee_attack_damage = NinjaTrap::melee_attack_damage;
-	ranged_attack_damage = FragTrap::ranged_attack_damage;
-	armor_damage_reduction = FragTrap::armor_damage_reduction;
+    // hit_points = FragTrap::hit_points;
+	// max_hit_points = NinjaTrap::max_hit_points;
+	// energy_points = NinjaTrap::energy_points;
+	// max_energy_points = NinjaTrap::max_energy_points;
+	// melee_attack_damage = NinjaTrap::melee_attack_damage;
+	// ranged_attack_damage = FragTrap::ranged_attack_damage;
+	// armor_damage_reduction = FragTrap::armor_damage_reduction;
 	std::cout << "SuperTrap " << name << " pour vous servir.\n";
 }
 
@@ -46,4 +52,9 @@ void SuperTrap::rangedAttack(std::string const &target)
 void SuperTrap::meleeAttack(std::string const &target)
 {
 	NinjaTrap::meleeAttack(target);
+}
+
+void SuperTrap::get_hit_points(void)
+{
+	std::cout << "SUperTrap has " << this->hit_points << std::endl;
 }

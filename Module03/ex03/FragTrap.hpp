@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/18 10:55:11 by user42            #+#    #+#             */
+/*   Updated: 2020/09/18 10:55:12 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
@@ -9,6 +21,7 @@
 class FragTrap : public ClapTrap
 {
 	public:
+		FragTrap();
 		FragTrap(std::string n);
 		~FragTrap();
 		FragTrap(FragTrap const &to_copy);
@@ -24,4 +37,5 @@ class FragTrap : public ClapTrap
 
 	private:
 };
+typedef void(FragTrap::* attack) (std::string const &target);
 #endif

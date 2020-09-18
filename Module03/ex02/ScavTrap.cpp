@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/18 10:55:38 by user42            #+#    #+#             */
+/*   Updated: 2020/09/18 11:15:23 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap(100, 100, 50, 50, 1, "no name", 20, 15, 3)
 {
-	std::cout << "ScavTrap " << name << " ici present.\n";
+	std::cout << "ScavTrap " << this->name << " ici present.\n";
 }
 
 ScavTrap::ScavTrap(std::string n) : ClapTrap(100, 100, 50, 50, 1, n, 20, 15, 3)
 {
-	std::cout << "ScavTrap " << name << " ici present.\n";
+	std::cout << "ScavTrap " << this->name << " ici present.\n";
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << this->name << " : \"Admirez mon aura mortelle qui s'eteint!\"\n";
+	std::cout << "ScavTrap " << this->name << " : \"Admirez mon aura mortelle qui s'eteint!\"\n";
 }
 
 ScavTrap::ScavTrap(ScavTrap const &to_copy)
