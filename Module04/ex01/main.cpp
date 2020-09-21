@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/21 19:21:01 by user42            #+#    #+#             */
+/*   Updated: 2020/09/21 19:21:02 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AWeapon.hpp"
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
@@ -44,6 +56,7 @@ int main()
 	Enemy enemy(10, "Evil");
 	enemy.takeDamage(20);
 	std::cout << "Enemy type: " << enemy.getType() << "\n";
+	std::cout << "HP: 10\n";
 	std::cout << "HP after having taken 20 damages: " << enemy.getHP() << "\n";
 	std::cout << "Creation of SuperMutant: " << std::endl;
 	SuperMutant super;
@@ -55,6 +68,5 @@ int main()
 	rad.takeDamage(20);
 	std::cout << "Type: " << rad.getType() << "\n";
 	std::cout << "HP after having taken 20 damages: " << rad.getHP() << "\n";
-*/
 	return 0;
 }
