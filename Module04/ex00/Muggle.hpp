@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Muggle.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/21 18:18:10 by user42            #+#    #+#             */
+/*   Updated: 2020/09/21 18:18:11 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef MUGGLE_HPP
 #define MUGGLE_HPP
 
@@ -14,7 +26,7 @@ class Muggle : public Victim
 		Muggle &operator=(Muggle const &to_copy);
 		void getPolymorphed(void) const;
 
-	private:
+	protected:
 		Muggle();
 };
 #endif

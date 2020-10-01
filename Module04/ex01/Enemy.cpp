@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Enemy.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/21 19:20:45 by user42            #+#    #+#             */
+/*   Updated: 2020/09/21 19:20:46 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Enemy.hpp"
 
 Enemy::Enemy()
@@ -15,34 +27,34 @@ Enemy::~Enemy()
 Enemy::Enemy(Enemy const &to_copy)
 {
 	std::cout << "Copy constructor called\n";
-	operator=(to_copy);
+	*this = to_copy;
 }
 
 Enemy &Enemy::operator=(Enemy const &to_copy)
 {
 	if (this != &to_copy)
 	{
-		_hp = to_copy._hp;
-		_type = to_copy._type;
+		this->_hp = to_copy._hp;
+		this->_type = to_copy._type;
 	}
 	return *this;
 }
 
 std::string Enemy::getType(void) const
 {
-	return (_type);
+	return (this->_type);
 }
 
 int Enemy::getHP(void) const
 {
-	return (_hp);
+	return (this->_hp);
 }
 
 void Enemy::takeDamage(int damage)
 {
 	if (damage < 0)
 		damage = 0;
-	_hp -= damage;
+	this->_hp -= damage;
 	if (getHP() < 0)
-		_hp = 0;
+		this->_hp = 0;
 }

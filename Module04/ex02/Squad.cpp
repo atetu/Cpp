@@ -1,6 +1,6 @@
 #include "Squad.hpp"
 
-Squad::Squad() : count(0), begin_list(0)
+Squad::Squad() : count(0), begin_list(NULL)
 {
 }
 
@@ -14,19 +14,19 @@ Squad::~Squad()
 	delete begin_list->unit;
 }
 
-Squad::Squad(Squad const &to_copy)
+Squad::Squad(Squad const &to_copy) : count(0), begin_list(NULL)
 {
-	Squad obj;
-	obj = to_copy;
-	ISpaceMarine *copy;	
-	count = to_copy.count;
-	for (int i = 0; i != count; i++)
-	{
-		copy = obj.begin_list->unit->clone();
-		push(copy);
-		obj.begin_list = obj.begin_list->next;
-	}
-
+	// Squad obj;
+	// obj = to_copy;
+	// ISpaceMarine *copy;	
+	// count = to_copy.count;
+	// for (int i = 0; i != count; i++)
+	// {
+	// 	copy = obj.begin_list->unit->clone();
+	// 	push(copy);
+	// 	obj.begin_list = obj.begin_list->next;
+	// }
+	this-> operator=(other);
 }
 
 Squad &Squad::operator=(Squad const &to_copy)

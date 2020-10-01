@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Peon.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/21 18:18:19 by user42            #+#    #+#             */
+/*   Updated: 2020/09/21 18:18:21 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PEON_HPP
 #define PEON_HPP
 
@@ -14,7 +26,7 @@ class Peon : public Victim
 		Peon &operator=(Peon const &to_copy);
 		void getPolymorphed(void) const;
 
-	private:
+	protected:
 		Peon();
 };
 #endif
