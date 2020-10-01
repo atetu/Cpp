@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Identify.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/28 17:59:22 by user42            #+#    #+#             */
+/*   Updated: 2020/09/28 17:59:23 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string>
 #include <exception>
 #include <iostream>
@@ -23,35 +35,6 @@ void identify_from_pointer(Base *p)
 
 void identify_from_reference(Base &p)
 {
-/*	try
-	{
-		A a = dynamic_cast<A&>(p);
-		std::cout << "\"A\"\n";
-		return;
-	}
-	catch(std::exception const &e)
-	{
-	}
-	try
-	{
-		B b = dynamic_cast<B&>(p);
-		std::cout << "\"B\"\n";
-		return;
-	}
-	catch(std::exception const &e)
-	{
-	}
-	try
-	{
-		C c = dynamic_cast<C&>(p);
-		std::cout << "\"C\"\n";
-		return;
-	}
-	catch(std::exception const &e)
-	{
-	}
-	std::cout << "Unindentified type \n";
-*/
 	if (dynamic_cast<A*>(&p))
 		std::cout << "\"A\"\n";
 	else if (dynamic_cast<B*>(&p))
@@ -60,5 +43,4 @@ void identify_from_reference(Base &p)
 		std::cout << "\"C\"\n";
 	else
 		std::cout << "Unindentified type \n";
-
 }

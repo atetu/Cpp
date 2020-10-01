@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Convert.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/28 15:41:57 by user42            #+#    #+#             */
+/*   Updated: 2020/09/28 19:37:51 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CONVERT_HPP
 #define CONVERT_HPP
 
@@ -6,6 +18,8 @@
 #include <string>
 #include <iomanip>
 #include <exception>
+#include <limits>
+#include <cmath>
 
 class Convert
 {
@@ -14,19 +28,12 @@ class Convert
 		~Convert();
 		Convert(Convert const &);
 		Convert &operator=(Convert const &to_copy);
-		void parsing();
-		void redirection();
-		void FromChar();
-		void FromInt();
-		void FromFloat();
-		void FromDouble();
-		void print();
-		void checkValues();
-		void getInt();
-		void getFloat();
-		void getDouble();
-		void getChar();
-
+		bool conv();
+		void printChar();
+		void printInt();
+		void printFloat();
+		void printDouble();
+	
 	class Error : public std::exception
 	{
 		public:
@@ -40,19 +47,6 @@ class Convert
 	private:
 		Convert();
 		std::string _value;
-		int _value_int;
-		float _value_float;
 		double _value_double;
-		char _value_char;
-		int _impossible[4];
-		int _non_displayable;
-		int type;
-		enum _type{
-			_char,
-			_int,
-			_float,
-			_double,
-			_none
-		};
 };
 #endif

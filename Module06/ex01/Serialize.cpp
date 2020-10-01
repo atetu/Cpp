@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Serialize.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/28 16:52:08 by user42            #+#    #+#             */
+/*   Updated: 2020/09/28 17:04:35 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Serialize.hpp"
 
 void	*serialize(void)
@@ -22,7 +34,6 @@ void	*serialize(void)
 	data = new char[20];
 	for (int i = 0; i < 8; i++)
 		data[i] = array1[i];
-	//*reinterpret_cast<int*>(data + 8) = nb;
 	*(data + 8) = nb;
 	for (int i = 0; i < 8; i++)
 		data[i + 12] = array2[i];

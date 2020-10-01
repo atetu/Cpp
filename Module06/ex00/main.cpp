@@ -1,22 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/28 15:42:01 by user42            #+#    #+#             */
+/*   Updated: 2020/09/28 19:15:29 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <sstream>
 #include <string>
 #include "Convert.hpp"
-
-/*template<typename T>
-   T StringToNumber(const std::string& numberAsString)
-   {
-      T valor;
-
-      std::stringstream stream(numberAsString);
-      stream >> valor;
-      if (stream.fail()) {
-         std::runtime_error e(numberAsString);
-         throw e;
-      }
-      return valor;
-   }
-*/
+#include <limits>
 
 int main (int argc, char **argv)
 {
@@ -26,7 +24,11 @@ int main (int argc, char **argv)
 		return (0);
 	}
 	Convert convert(argv[1]);
-	convert.parsing();
-	convert.redirection();
+	if (!convert.conv())
+		return (-1);
+	convert.printChar();
+	convert.printInt();
+	convert.printFloat();
+	convert.printDouble();
 	return (0);
 }

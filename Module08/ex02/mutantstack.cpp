@@ -1,38 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mutantstack.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/01 14:42:34 by user42            #+#    #+#             */
+/*   Updated: 2020/10/01 14:42:35 by user42           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "mutantstack.hpp"
 
-template <typename T>
-MutantStack<T>::MutantStack() : std::stack<T>() 
-{
-}
-
-template <typename T>
-MutantStack<T>::~MutantStack()
-{
-}
-
-template <typename T>
-MutantStack<T>::MutantStack(MutantStack const &to_copy) : std::stack<T>(to_copy)
-{
-}
-
-template <typename T>
-typename MutantStack<T>::iterator MutantStack<T>::begin()
-{
-	return std::begin(c);
-}
-template <typename T>
-typename MutantStack<T>::const_iterator MutantStack<T>::begin() const
-{
-	return std::begin(c);
-}
-template <typename T>
-typename  MutantStack<T>::iterator MutantStack<T>::end()
-{
-	return std::end(c);
-}
-
-template <typename T>
-typename  MutantStack<T>::const_iterator MutantStack<T>::end() const
-{
-	return std::end(c);
-}
+/* when using a template class, the function implementations have to be in the header. 
+Otherwise you need to explicitly delcare class for each 
+type in cpp file.*/
