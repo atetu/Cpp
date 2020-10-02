@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 18:17:34 by user42            #+#    #+#             */
-/*   Updated: 2020/10/01 18:22:22 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/02 10:42:16 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ class Span
 		Span(Span const &to_copy);
 		Span &operator=(Span const &to_copy);
 		void addNumber(int n);
-		void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+		void addNumber(std::vector<int> const &numbers);
+		void addNumber(int start, int end);
 		int shortestSpan();
 		int longestSpan();
 
@@ -73,16 +74,33 @@ class Span
 		public:
 			OffLimitsException() throw () {};
 			virtual ~ OffLimitsException() throw () {};
-			 OffLimitsException( OffLimitsException const &to_copy) throw ()
+			OffLimitsException( OffLimitsException const &to_copy) throw ()
 			{
 				*this = to_copy;
 			};
-			 OffLimitsException &operator=( OffLimitsException const &to_copy) throw () 
+			OffLimitsException &operator=( OffLimitsException const &to_copy) throw () 
 			{
 				(void) to_copy;
 				return (*this);
 			};
 			virtual const char* what() const throw() {return "Off limit span.\n";};
+	};
+
+	class WrongArgumentException: public std::exception
+	{
+		public:
+			WrongArgumentException() throw () {};
+			virtual ~ WrongArgumentException() throw () {};
+			WrongArgumentException(WrongArgumentException const &to_copy) throw ()
+			{
+				*this = to_copy;
+			};
+			WrongArgumentException &operator=(WrongArgumentException const &to_copy) throw () 
+			{
+				(void) to_copy;
+				return (*this);
+			};
+			virtual const char* what() const throw() {return "Wrong arguments.\n";};
 	};
 
 	private:

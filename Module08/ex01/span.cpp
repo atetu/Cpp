@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 18:17:26 by user42            #+#    #+#             */
-/*   Updated: 2020/10/01 18:33:28 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/02 10:42:40 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,24 @@ void Span::addNumber(int n)
 		throw MaxNumberException();
 }
 
-void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+void Span::addNumber(std::vector<int> const &numbers)
 {
-	std::vector<int>::iterator it;
-	if (this->_vec.size() + std::distance(begin, end) > this->_N)
+	if (numbers.empty())
+		return;
+	if (this->_vec.size() + numbers.size() > this->_N)
 		throw MaxNumberException();
-	it = _vec.begin();
-	for (; it != _vec.end(); it++)
-		;
-	_vec.insert(it, begin, end);
+	_vec.insert(_vec.end(), numbers.begin(), numbers.end());
+}
+
+void Span::addNumber(int start, int end)
+{
+	if (end < start)
+		throw WrongArgumentException();
+	int diff = end - start;
+	if (_vec.size() + diff > _N)
+		throw MaxNumberException();
+	for (int n = start; n < end; n++)
+		_vec.push_back(n);
 }
 
 int Span::shortestSpan()

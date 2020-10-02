@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 14:42:28 by user42            #+#    #+#             */
-/*   Updated: 2020/10/01 14:42:29 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/02 10:50:59 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,6 @@ int main()
 	it--;
 	std::cout << "*it after it--: " << *it << std::endl;
 	it--;
-	std::cout << "*it after it--: " << *it << std::endl;
-	std::cout << "*it after it--: " << *it << std::endl;
-	std::cout << "*it after it--: " << *it << std::endl;
 	std::cout << "Values of *it for the loop it++ until it == ite: " << std::endl;
 	while (it != ite)
 	{
@@ -102,9 +99,6 @@ int main()
 	it2--;
 	std::cout << "*it after it--: " << *it2 << std::endl;
 	it2--;
-	std::cout << "*it after it--: " << *it2 << std::endl;
-	std::cout << "*it after it--: " << *it2 << std::endl;
-	std::cout << "*it after it--: " << *it2 << std::endl;
 	std::cout << "Values of *it for the loop it++ until it == ite: " << std::endl;
 	while (it2 != ite2)
 	{
@@ -126,5 +120,4 @@ int main()
 		++itr2;
 	}
 	return 0;
-
 }

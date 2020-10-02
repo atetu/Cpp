@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 18:17:16 by user42            #+#    #+#             */
-/*   Updated: 2020/10/01 18:34:09 by user42           ###   ########.fr       */
+/*   Updated: 2020/10/02 10:40:56 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,7 @@ int main()
 	srand(time(NULL));
 	Span sp4 = Span(10000);
 	try
-	{
-		
+	{		
 		for (int i = 0; i < 10000; i++)
 		sp4.addNumber(std::rand());
 		std::cout << sp4.shortestSpan() << std::endl;
@@ -119,9 +118,20 @@ int main()
 		std::vector<int> t_vec;
 		for (int i = 0; i < 10000; i++)
 			t_vec.push_back(std::rand());
-		sp5.addNumber(t_vec.begin(), t_vec.end());
+		sp5.addNumber(t_vec);
 		std::cout << sp5.shortestSpan() << std::endl;
 		std::cout << sp5.longestSpan() << std::endl;
+	}
+	catch(std::exception const &e)
+	{
+		std::cout << e.what();
+	}
+	Span sp6 = Span(100000);
+	try
+	{
+		sp6.addNumber(0, 100000);
+		std::cout << sp6.shortestSpan() << std::endl;
+		std::cout << sp6.longestSpan() << std::endl;
 	}
 	catch(std::exception const &e)
 	{
